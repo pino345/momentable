@@ -39,12 +39,17 @@
     display: block;
 }
 
+.js-form {
+    position: relative;
+}
+
 .js-toDoList {
     align-self: flex-start;
 }
 
 .js-toDoForm {
     position: relative;
+    margin-top: 1.6rem;
 }
 
 li {
