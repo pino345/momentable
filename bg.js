@@ -8,11 +8,10 @@ const IMG_NUMBER = 3;
 
 function paintImage(imgNumber) {
     const image = new Image();
-    img.src = '/images/${imgNumber + 1}.jpg';
+    image.src = `img/${imgNumber + 1}.jpg`;
     image.classList.add("bgImage");
-    body.appendChild(image);
-    // image.addEventListener("loadend", );
-    
+    body.prepend(image);
+    // image.addEventListener("loadend", );    
 }
 
 function genRandom() {
@@ -21,7 +20,7 @@ function genRandom() {
 }
 
 function init() {
-    const randomNumber = genRandom;
+    const randomNumber = genRandom();
     paintImage(randomNumber);
 }
 

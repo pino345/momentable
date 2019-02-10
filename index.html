@@ -8,21 +8,29 @@
         <link href="style.css" type="text/css" rel="stylesheet">
     </head>
     <body>
-        <div class="js-clock">
-            <h1>00:00</h1>
+        <div class="bgImage"></div>
+        <div class="grid-container">
+            <span class="grid-items js-weather"></span>
+            <div class="grid-items js-clock">
+                <h1>00:00</h1>
+            </div>
+            <form class=" grid-items js-form form">
+                <input type="text" placeholder="What is your name?" class="inputEffect">
+            </form>
+            <h4 class="grid-items js-greetings greetings"></h4>
+            <form class="grid-items js-toDoForm">
+                <input type="text" class="inputEffect"/>
+                <label>Write a to do</label>
+                <span class="focus-border"></span>
+            </form>
+            <ul class="grid-items js-toDoList">
+            </ul>
         </div>
-        <form class="js-form form">
-            <input type="text" placeholder="What is your name?">
-        </form>
-        <h4 class="js-greetings greetings"></h4>
-        <form class="js-toDoForm">
-            <input type="text" placeholder="Write a to do" />
-        </form>
-        <ul class="js-toDoList">
-        </ul>
         <script src="clock.js"></script>
         <script src="greeting.js"></script>
         <script src="todo.js"></script>
-        <script src="bg.js"></script>
+        <!-- <script src="bg.js"></script> -->
+        <script src="weather.js"></script>
+        <script src="unsplash.js"></script>
     </body>
 </html>

@@ -1,21 +1,14 @@
-.form, .greetings {
-    display: none;
-}
-
-.showing {
-    display: block;
-}
-
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
     to {
-        opacity: 1;
+        opacity: 8;
     }
 }
 
 .bgImage{
+    opacity: .75;
     position: absolute;
     top: 0;
     left: 0;
@@ -25,3 +18,87 @@
     animation: fadeIn 0.5s linear;
 }
 
+.grid-container {
+    margin-top: 5rem;
+    display: grid;
+    grid-template: 1fr 10rem 1fr 3rem 50% / 100%;
+    justify-items: center;
+    align-items: center; 
+    text-shadow: 1px 1px 1px rgba(0,0,0,.1);
+}
+
+.js-clock h1 {
+    font-size: 5em;
+}
+
+.form, .greetings {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
+
+.js-toDoList {
+    align-self: flex-start;
+}
+
+.js-toDoForm {
+    position: relative;
+}
+
+li {
+    font-size: 1.6rem;
+}
+
+li button {
+    background-color: transparent;
+    border: 0;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+/* input style */
+input[type="text"]{
+    font: 15px/24px serif;
+    color: #333;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+.inputEffect{
+    border: 0;
+    padding: 4px 0;
+    border-bottom: 1px solid #333;
+    background-color: transparent;
+}
+
+.inputEffect ~ .focus-border{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    transition: 0.4s;
+}
+
+.inputEffect ~ .focus-border{
+    width: 100%;
+    transition: 0.4s;
+}
+
+.inputEffect ~ label{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 9px;
+    transition: 0.3s; 
+    z-index: -1;
+    letter-spacing: 0.5px;
+}
+
+.inputEffect:focus ~ label{
+    top: -16px;
+    font-size: 12px;
+    transition: 0.3s;
+}
